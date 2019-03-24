@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//@3C//DTD HTML 4.01//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>掲示板サンプル</title>
+  <style type="text/css">
+    <!--
+    h1 { color: green }
+    strong { color: blue; font-size: large }
+    em { font-style: italic }
+    -->
+  </style>
+</head>
+<body>
+  <h1>私の掲示板</h1>
+
+  <p>
+  ご自由に書き込んでください。
+  </p>
+
+  <form action="bbs.cgi" method="post"><div>
+  <!-- ①POST形式でbbs.cgiという名前のプログラムに入力データを渡すフォームの開始タグ  -->
+   
+    題名<input type="text" name="title" size="60"><br>
+    <!-- ②記事の題名を書くテキスト入力フィールドをtitleという名前で宣言する  -->
+    名前<input type="text" name="author" size="20"><br>
+    <!-- ③書き込む人の名前を書くテキスト入力フィールドをauthorという名前で宣言する  -->
+    <textarea cols="60" rows="5" name="text"></textarea><br>
+    <!-- ④記事の本文を書く複数行のテキスト入力フィールドをtextという名前で宣言する  -->
+    <input type="submit" value="送信">
+    <!-- ⑤送信ボタンを配置する  -->
+    <input type="reset" value="リセット"
+    <!-- ⑥リセットボタンを配置する  -->
+  </div></form>
+  <!-- ⑦フォームの終了タグ  -->
+
+  <hr>
+
+  <div><string>書き込みテスト</string><br><em>John Smith</em><br>
+    <br>ちゃんと書けたかな？</div><hr>
+    <!-- ⑧書き込まれた記事の内容は、このように記事の題名、書き込んだ人の名前、記事の本文の順で表示されている  -->
+
+</body>
+</html>
