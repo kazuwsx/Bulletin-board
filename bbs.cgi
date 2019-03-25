@@ -28,6 +28,7 @@ sub readFormData
   if ($ENV['REQUEST_METHOD'] eq 'POST') { 
     #⑪もしREQUEST_METHODがPOSTだったら
     read(STDIN, $buffer, $ENV{'CONTENT_LENGTH'});
+    print "ok";
     #⑫標準入力(STDIN)から$bufferに環境変数CONTENT_LENGTHに示されている長さ分だけデータを読み込む
   }
   else {
@@ -114,11 +115,9 @@ sub browsePage
 </head>
 <body>
   <h1>私の掲示板</h1>
-
   <p>
   ご自由に書き込んでください
   </p>
-
   <form action="bbs.cgi" method="post"><div>
     題名<input type="text" name="title" size="60"><br>
     名前<input type="text" name="author" size="20"><br>
@@ -148,4 +147,3 @@ END
 
 }
 #㊷ENDがあるので、ここまでの内容がprintによって出力されることになる
-
